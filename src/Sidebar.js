@@ -14,7 +14,7 @@ import SidebarOptions from './SidebarOptions';
 function Sidebar() {
     return (
         <div className="sidebar">
-            <TwitterIcon />
+            <TwitterIcon className="sidebar_twitterIcon" />
 
             <SidebarOptions active Icon={HomeIcon} text="Home" />
             <SidebarOptions Icon={SearchIcon} text="Explore" />
