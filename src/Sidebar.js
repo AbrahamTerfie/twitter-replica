@@ -26,9 +26,6 @@ function Sidebar() {
             <SidebarOptions Icon={MoreHorizIcon} text={"More"} />
 
             <Button variant="outlined" className="sidebarTweet" fullWidth>Tweet</Button>
-
-
-
         </div>
     );
 }
