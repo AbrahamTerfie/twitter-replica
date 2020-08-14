@@ -8,42 +8,41 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import PublishIcon from "@material-ui/icons/Publish";
 
 function Post(
-    displayname,
+   { displayname,
     username,
     verified,
     text,
     image,
-    avatar
+    avatar}
 ) {
     return (
         <div className="post">
             <div className="post_avatar">
-                <Avatar src=" " />
+                <Avatar src={avatar} />
             </div>
             <div className="post_body">
                 <div className="post_header">
                     <div className="post_headerText">
-                        <h3>usernname
-                            <span className="post_headerspecial">
-                                <VerifiedUserIcon className="post_badge" /> @thisusername
+                        <h3>{displayname}{" "}
+                            <span className="post__headerSpecial">
+                                {verified && <VerifiedUserIcon className="post__badge" />} @
+                  {username}
                             </span>
                         </h3>
-                       </div>
-                       <div>
+                    </div>
+                    <div>
                         <div className="post_headerDescription">
                             <p>
-                                this is a random place holder text , 
-                                this is a random placeholder text ,
-                               
+                                {text}
                             </p>
                         </div>
-                        <img src="https://media.giphy.com/media/IcifS1qG3YFlS/giphy.gif" alt="" />
-                            <div className="post_footer">
-                                <ChatBubbleOutlineIcon fontSize="small"/>
-                                <RepeatIcon fontSize="small"/>
-                                <FavoriteBorderIcon fontSize="small"/>
-                                <PublishIcon fontSize="small/>"/>
-                            </div>
+                        <img src={image} alt="" />
+                        <div className="post_footer">
+                            <ChatBubbleOutlineIcon fontSize="small" />
+                            <RepeatIcon fontSize="small" />
+                            <FavoriteBorderIcon fontSize="small" />
+                            <PublishIcon fontSize="small/>" />
+                        </div>
                     </div>
                 </div>
             </div>
