@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Feed.css";
-import TweetBox from './TweetBox';
-import Post from './Post';
+import TweetBox from '../Tweetbox/TweetBox'
+import Post from '../Post/Post';
 function Feed() {
     return (
         <div className="feed">
